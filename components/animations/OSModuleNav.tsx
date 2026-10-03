@@ -264,7 +264,7 @@ function ModuleMockup({ moduleId, accent }: { moduleId: string; accent: string }
           <div className="relative w-20 h-20">
             <svg viewBox="0 0 36 36" className="w-20 h-20 -rotate-90">
               <circle cx="18" cy="18" r="15.9" fill="none" stroke="#F3F4F6" strokeWidth="3" />
-              <motion.circle
+              <circle
                 cx="18"
                 cy="18"
                 r="15.9"
@@ -272,9 +272,8 @@ function ModuleMockup({ moduleId, accent }: { moduleId: string; accent: string }
                 stroke={accent}
                 strokeWidth="3"
                 strokeLinecap="round"
-                initial={{ strokeDasharray: "0 100" }}
-                animate={{ strokeDasharray: "78 100" }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                strokeDasharray="78 100"
+                className="credit-ring-fill"
               />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -302,6 +301,15 @@ function ModuleMockup({ moduleId, accent }: { moduleId: string; accent: string }
             ))}
           </div>
         </div>
+        <style>{`
+          .credit-ring-fill {
+            stroke-dasharray: 0 100;
+            animation: ringFill 1s ease-out forwards;
+          }
+          @keyframes ringFill {
+            to { stroke-dasharray: 78 100; }
+          }
+        `}</style>
       </div>
     );
   }
