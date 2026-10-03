@@ -178,9 +178,9 @@ export function DisbursalTimeline() {
               }
             >
               {s.status === "done" ? (
-                <CheckCircle2 className="w-3.5 h-3.5" />
+                <CheckCircle2 className="w-[14px] h-[14px]" />
               ) : s.status === "active" ? (
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-[14px] h-[14px]" />
               ) : (
                 <span className="w-1.5 h-1.5 rounded-full bg-current" />
               )}
@@ -645,7 +645,7 @@ export function RiskComplianceUI() {
           >
             <span className="text-[13px]">{r.label}</span>
             <span className="flex items-center gap-1.5 text-[12px] font-medium" style={{ color: "var(--vp-success)" }}>
-              <CheckCircle2 className="w-3.5 h-3.5" />
+              <CheckCircle2 className="w-[14px] h-[14px]" />
               {r.status}
             </span>
           </div>

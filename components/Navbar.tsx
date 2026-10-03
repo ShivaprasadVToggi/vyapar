@@ -193,7 +193,7 @@ export function Navbar() {
                               className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
                               style={{ background: "var(--vp-brand-surface)", color: "var(--vp-brand)" }}
                             >
-                              <Icon className="w-4.5 h-4.5" />
+                              <Icon className="w-[18px] h-[18px]" />
                             </div>
                             <div>
                               <div className="font-medium text-[14px] text-[var(--vp-fg)] group-hover:text-[var(--vp-brand)] transition-colors flex items-center gap-1">
@@ -279,7 +279,7 @@ export function Navbar() {
                         className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
                         style={{ background: "var(--vp-brand-surface)", color: "var(--vp-brand)" }}
                       >
-                        <Icon className="w-4.5 h-4.5" />
+                        <Icon className="w-[18px] h-[18px]" />
                       </div>
                       <div>
                         <div className="font-medium text-[14px]">{mod.name}</div>

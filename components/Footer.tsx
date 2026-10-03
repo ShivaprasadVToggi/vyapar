@@ -96,16 +96,16 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a href="#" aria-label="Twitter" className="opacity-60 hover:opacity-100 transition-opacity">
-              <Twitter className="w-4.5 h-4.5" />
+              <Twitter className="w-[18px] h-[18px]" />
             </a>
             <a href="#" aria-label="LinkedIn" className="opacity-60 hover:opacity-100 transition-opacity">
-              <Linkedin className="w-4.5 h-4.5" />
+              <Linkedin className="w-[18px] h-[18px]" />
             </a>
             <a href="#" aria-label="GitHub" className="opacity-60 hover:opacity-100 transition-opacity">
-              <Github className="w-4.5 h-4.5" />
+              <Github className="w-[18px] h-[18px]" />
             </a>
             <a href="#" aria-label="YouTube" className="opacity-60 hover:opacity-100 transition-opacity">
-              <Youtube className="w-4.5 h-4.5" />
+              <Youtube className="w-[18px] h-[18px]" />
             </a>
           </div>
         </div>
