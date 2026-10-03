@@ -28,10 +28,7 @@ export function CTABand() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="/get-started"
-              className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl font-medium text-[15px] transition-colors"
-              style={{ background: "var(--vp-brand)", color: "white" }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = "var(--vp-brand-hover)")}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "var(--vp-brand)")}
+              className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl font-medium text-[15px] transition-colors cta-primary-btn"
             >
               Get Started
               <ArrowRight className="w-4 h-4" />

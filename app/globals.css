@@ -177,6 +177,14 @@ body {
   outline-offset: 2px;
 }
 
+.cta-primary-btn {
+  background: var(--vp-brand);
+  color: white;
+}
+.cta-primary-btn:hover {
+  background: var(--vp-brand-hover);
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
