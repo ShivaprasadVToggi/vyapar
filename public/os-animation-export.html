@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>B2Beat OS — Canopy-Style Module Animation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #FAFAF7;
+    color: #111111;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  .header { text-align: center; padding: 80px 0 48px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7280; margin-bottom: 16px; }
+  h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; margin: 0 0 12px; }
+  .subtitle { font-size: clamp(18px, 2vw, 24px); color: #9CA3AF; margin: 0; }
+  
+  .os-wrapper { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; padding-bottom: 80px; }
+  @media (min-width: 1024px) { .os-wrapper { flex-direction: row; gap: 48px; } }
+  
+  .sidebar { position: relative; width: 100%; flex-shrink: 0; }
+  @media (min-width: 1024px) { .sidebar { width: 224px; } }
+  
+  .dot {
+    position: absolute; left: 0; width: 8px; height: 8px; border-radius: 50%;
+    background: #4F46E5; transition: top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav { padding-left: 20px; border-left: 1px solid #E5E7EB; }
+  .nav button {
+    display: block; width: 100%; text-align: left; padding: 10px 16px 10px 0;
+    font-size: 14px; border: none; background: none; cursor: pointer;
+    transition: color 0.2s ease-out, font-weight 0.2s;
+    color: #9CA3AF;
+  }
+  .nav button:hover { color: #6B7280; }
+  .nav button.active { color: #111111; font-weight: 600; }
+  
+  .panel {
+    flex: 1; width: 100%; min-width: 0;
+    border-radius: 16px; padding: 32px 40px;
+    background: #F0F0ED; border: 1px solid #4F46E5;
+    transition: border-color 0.35s ease-out, box-shadow 0.35s ease-out;
+  }
+  .panel-inner { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; }
+  @media (min-width: 1024px) { .panel-inner { flex-direction: row; } }
+  
+  .panel-text { flex: 1; min-width: 0; }
+  .panel-title-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .icon-box { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+  .panel h3 { font-size: clamp(24px, 2.5vw, 30px); font-weight: 600; letter-spacing: -0.01em; margin: 0; color: #111111; }
+  .panel p { font-size: 16px; line-height: 1.6; color: #6B7280; margin: 0 0 24px; max-width: 480px; }
+  .explore { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; }
+  .arrow-btn { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .arrow-btn svg { width: 16px; height: 16px; color: white; }
+  
+  .mockup { flex-shrink: 0; width: 100%; max-width: 360px; background: white; border-radius: 12px; border: 1px solid #E5E7EB; box-shadow: 0 1px 3px rgba(0,0,0,0.04); padding: 20px; }
+  .mockup-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #F3F4F6; }
+  .mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .mockup-label { font-size: 12px; font-weight: 500; color: #6B7280; }
+  
+  .route-row { display: flex; align-items: center; justify-content: space-between; padding: 8px; border-radius: 8px; }
+  .route-row:nth-child(odd) { background: #FAFAFA; }
+  .route-left { display: flex; align-items: center; gap: 8px; }
+  .route-name { font-size: 13px; font-weight: 500; color: #374151; }
+  .route-right { display: flex; align-items: center; gap: 12px; }
+  .route-orders { font-size: 12px; color: #6B7280; font-family: ui-monospace, monospace; }
+  .route-badge { font-size: 11px; padding: 2px 8px; border-radius: 9999px; font-weight: 500; }
+  
+  .fade-enter { animation: fadeIn 0.35s ease-out; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .progress-ring { transform: rotate(-90deg); }
+  .progress-ring circle { transition: stroke-dasharray 0.8s ease-out; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="eyebrow">B2BEAT OS</div>
+      <h1>One home for operating and scaling embedded credit.</h1>
+      <p class="subtitle">However complex.</p>
+    </div>
+    
+    <div class="os-wrapper">
+      <div class="sidebar">
+        <div class="dot" id="dot"></div>
+        <nav class="nav" id="nav"></nav>
+      </div>
+      <div class="panel" id="panel">
+        <div class="panel-inner fade-enter" id="panelInner"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const modules = [
+  { id: "route-pools", name: "Route Pools", title: "Route Pools", accent: "#4F46E5", description: "Aggregate distributor delivery routes into pooled, pre-financed order blocks. Turn existing logistics into a demand signal that lenders can trust." },
+  { id: "disbursal", name: "Closed-Loop Disbursal", title: "Closed-Loop Disbursal", accent: "#7C3AED", description: "Funds flow directly to the supplier, never through the distributor. Principal is protected from day one with a verifiable audit trail." },
+  { id: "pod", name: "Proof of Delivery", title: "Proof of Delivery", accent: "#0EA5E9", description: "QR-coded POD confirms every drop in real time. Repayment triggers automatically the moment inventory hits the kirana shelf." },
+  { id: "repayment", name: "Repayment Engine", title: "Repayment Engine", accent: "#059669", description: "Daily sweep from kirana sales repays principal incrementally. Self-liquidating structure with configurable waterfall logic." },
+  { id: "credit", name: "Credit Intelligence", title: "Credit Intelligence", accent: "#D97706", description: "Behavioral scoring from route velocity, basket mix, and repayment consistency. Underwrite the network, not just the borrower." },
+  { id: "risk", name: "Risk & Compliance", title: "Risk & Compliance", accent: "#DC2626", description: "Continuous monitoring with automated alerts. RBI LSP framework compliant, with immutable audit trails and data residency controls." },
+];
+
+let active = 0;
+const nav = document.getElementById("nav");
+const dot = document.getElementById("dot");
+const panel = document.getElementById("panel");
+const panelInner = document.getElementById("panelInner");
+
+function renderNav() {
+  nav.innerHTML = "";
+  modules.forEach((mod, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = mod.name;
+    btn.className = i === active ? "active" : "";
+    btn.onclick = () => { active = i; render(); };
+    nav.appendChild(btn);
+  });
+}
+
+function positionDot() {
+  const btns = nav.querySelectorAll("button");
+  const activeBtn = btns[active];
+  const parentRect = nav.getBoundingClientRect();
+  const btnRect = activeBtn.getBoundingClientRect();
+  dot.style.top = (btnRect.top - parentRect.top + btnRect.height / 2 - 4) + "px";
+}
+
+function renderMockup(mod) {
+  if (mod.id === "route-pools") {
+    return `
+      <div class="mockup-header">
+        <div class="mockup-dot" style="background:${mod.accent}"></div>
+        <div class="mockup-label">Route Map</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${[
+          { name: "Route 07 — North", orders: "124", status: "Pooled", bg: "#EEF2FF", color: mod.accent },
+          { name: "Route 12 — Central", orders: "89", status: "Pooling", bg: "#FEF3C7", color: "#92400E" },
+          { name: "Route 03 — South", orders: "156", status: "Pooled", bg: "#EEF2FF", color: mod.accent },
+          { name: "Route 21 — East", orders: "67", status: "Active", bg: "#ECFDF5", color: "#059669" },
+        ].map(r => `
+          <div class="route-row">
+            <div class="route-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><path d="M10 17h4V5H2v12h3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M15 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/></svg>
+              <span class="route-name">${r.name}</span>
+            </div>
+            <div class="route-right">
+              <span class="route-orders">${r.orders} orders</span>
+              <span class="route-badge" style="background:${r.bg};color:${r.color}">${r.status}</span>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+  if (mod.id === "disbursal") {
+    return `
+      <div class="mockup-header">
+        <div class="mockup-dot" style="background:${mod.accent}"></div>
+        <div class="mockup-label">Funds Flow</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        ${[
+          { label: "Lender", amount: "₹5.0L", bg: "#F3F4F6", color: "#6B7280" },
+          { label: "Supplier", amount: "₹4.8L", bg: "#EEF2FF", color: mod.accent },
+          { label: "Kirana", amount: "₹0", bg: "#F3F4F6", color: "#6B7280" },
+        ].map(n => `
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+            <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:${n.bg}">
+              <span style="font-size:18px;font-weight:600;color:${n.color}">${n.label[0]}</span>
+            </div>
+            <span style="font-size:11px;font-weight:500;color:#6B7280">${n.label}</span>
+            <span style="font-size:12px;font-family:ui-monospace,monospace;font-weight:600;color:#1F2937">${n.amount}</span>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+  if (mod.id === "repayment") {
+    return `
+      <div class="mockup-header">
+        <div class="mockup-dot" style="background:${mod.accent}"></div>
+        <div class="mockup-label">Repayment — Day 14</div>
+      </div>
+      <div style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#6B7280;margin-bottom:4px">
+          <span>Progress</span><span style="font-family:ui-monospace,monospace;font-weight:600;color:${mod.accent}">58%</span>
+        </div>
+        <div style="height:8px;background:#F3F4F6;border-radius:9999px;overflow:hidden">
+          <div style="height:100%;width:58%;background:${mod.accent};border-radius:9999px;transition:width 0.8s ease-out"></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center">
+        <div style="padding:8px;border-radius:8px;background:#F3F4F6"><div style="font-size:10px;color:#6B7280">Collected</div><div style="font-size:13px;font-weight:600;font-family:ui-monospace,monospace;color:#1F2937">₹2.9L</div></div>
+        <div style="padding:8px;border-radius:8px;background:#F3F4F6"><div style="font-size:10px;color:#6B7280">Pending</div><div style="font-size:13px;font-weight:600;font-family:ui-monospace,monospace;color:#1F2937">₹2.1L</div></div>
+        <div style="padding:8px;border-radius:8px;background:#ECFDF5"><div style="font-size:10px;color:#059669">On-time</div><div style="font-size:13px;font-weight:600;font-family:ui-monospace,monospace;color:#059669">100%</div></div>
+      </div>
+    `;
+  }
+  if (mod.id === "credit") {
+    return `
+      <div class="mockup-header">
+        <div class="mockup-dot" style="background:${mod.accent}"></div>
+        <div class="mockup-label">Behavioral Score</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="position:relative;width:80px;height:80px">
+          <svg viewBox="0 0 36 36" width="80" height="80" class="progress-ring">
+            <circle cx="18" cy="18" r="15.9" fill="none" stroke="#F3F4F6" stroke-width="3"/>
+            <circle cx="18" cy="18" r="15.9" fill="none" stroke="${mod.accent}" stroke-width="3" stroke-linecap="round" stroke-dasharray="78 100"/>
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#1F2937">78</div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+          ${[
+            { l: "Route velocity", v: 82 },
+            { l: "Basket diversity", v: 71 },
+            { l: "Repayment consistency", v: 85 },
+          ].map(m => `
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:11px;color:#6B7280;width:112px">${m.l}</span>
+              <div style="flex:1;height:6px;background:#F3F4F6;border-radius:9999px;overflow:hidden">
+                <div style="height:100%;width:${m.v}%;background:${mod.accent};border-radius:9999px;transition:width 0.6s ease-out"></div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+  // Default / POD / Risk
+  return `
+    <div class="mockup-header">
+      <div class="mockup-dot" style="background:${mod.accent}"></div>
+      <div class="mockup-label">${mod.id === "pod" ? "Delivery Verification" : "Compliance Monitor"}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${mod.id === "pod" ? [
+        { l: "KYC verification", s: "Pass", c: "#059669" },
+        { l: "QR scan confirmed", s: "Verified", c: "#059669" },
+        { l: "Custody transferred", s: "Active", c: "#0EA5E9" },
+        { l: "Repayment armed", s: "Ready", c: mod.accent },
+      ] : [
+        { l: "KYC verification", s: "Pass", c: "#059669" },
+        { l: "Data residency check", s: "Pass", c: "#059669" },
+        { l: "Audit trail sync", s: "Active", c: "#0EA5E9" },
+        { l: "NBFC mandate", s: "Verified", c: "#059669" },
+      ].map(r => `
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:8px;border-radius:8px;background:#F9FAFB">
+          <span style="font-size:13px;color:#374151">${r.l}</span>
+          <span style="font-size:11px;padding:2px 8px;border-radius:9999px;font-weight:500;background:#ECFDF5;color:${r.c}">${r.s}</span>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderPanel() {
+  const mod = modules[active];
+  panel.style.borderColor = mod.accent;
+  panelInner.className = "panel-inner fade-enter";
+  panelInner.innerHTML = `
+    <div class="panel-text">
+      <div class="panel-title-row">
+        <div class="icon-box" style="background:${mod.accent}15">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${mod.accent}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3>${mod.title}</h3>
+      </div>
+      <p>${mod.description}</p>
+      <div class="explore" style="color:${mod.accent}">
+        <span>Explore module</span>
+        <div class="arrow-btn" style="background:${mod.accent}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="mockup">${renderMockup(mod)}</div>
+  `;
+}
+
+function render() {
+  renderNav();
+  positionDot();
+  renderPanel();
+}
+
+render();
+window.addEventListener("resize", positionDot);
+</script>
+</body>
+</html>
