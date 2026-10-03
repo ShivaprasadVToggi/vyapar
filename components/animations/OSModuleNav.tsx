@@ -11,17 +11,13 @@ import {
   Shield,
   ArrowUpRight,
   CheckCircle2,
-  Clock,
   Truck,
-  Building2,
-  Users,
-  TrendingUp,
 } from "lucide-react";
 
 type Module = {
   id: string;
   name: string;
-  icon: React.ComponentType<{ className?: string }>;
+  iconKey: "route" | "wallet" | "qrcode" | "arrows" | "brain" | "shield";
   title: string;
   description: string;
   accent: string;
@@ -31,7 +27,7 @@ const modules: Module[] = [
   {
     id: "route-pools",
     name: "Route Pools",
-    icon: Route,
+    iconKey: "route",
     title: "Route Pools",
     description:
       "Aggregate distributor delivery routes into pooled, pre-financed order blocks. Turn existing logistics into a demand signal that lenders can trust.",
@@ -40,7 +36,7 @@ const modules: Module[] = [
   {
     id: "disbursal",
     name: "Closed-Loop Disbursal",
-    icon: Wallet,
+    iconKey: "wallet",
     title: "Closed-Loop Disbursal",
     description:
       "Funds flow directly to the supplier, never through the distributor. Principal is protected from day one with a verifiable audit trail.",
@@ -49,7 +45,7 @@ const modules: Module[] = [
   {
     id: "pod",
     name: "Proof of Delivery",
-    icon: QrCode,
+    iconKey: "qrcode",
     title: "Proof of Delivery",
     description:
       "QR-coded POD confirms every drop in real time. Repayment triggers automatically the moment inventory hits the kirana shelf.",
@@ -58,7 +54,7 @@ const modules: Module[] = [
   {
     id: "repayment",
     name: "Repayment Engine",
-    icon: ArrowRightLeft,
+    iconKey: "arrows",
     title: "Repayment Engine",
     description:
       "Daily sweep from kirana sales repays principal incrementally. Self-liquidating structure with configurable waterfall logic.",
@@ -67,7 +63,7 @@ const modules: Module[] = [
   {
     id: "credit",
     name: "Credit Intelligence",
-    icon: Brain,
+    iconKey: "brain",
     title: "Credit Intelligence",
     description:
       "Behavioral scoring from route velocity, basket mix, and repayment consistency. Underwrite the network, not just the borrower.",
@@ -76,13 +72,25 @@ const modules: Module[] = [
   {
     id: "risk",
     name: "Risk & Compliance",
-    icon: Shield,
+    iconKey: "shield",
     title: "Risk & Compliance",
     description:
       "Continuous monitoring with automated alerts. RBI LSP framework compliant, with immutable audit trails and data residency controls.",
     accent: "#DC2626",
   },
 ];
+
+function ModuleIcon({ iconKey, color }: { iconKey: Module["iconKey"]; color: string }) {
+  const props = { className: "w-5 h-5", style: { color } };
+  switch (iconKey) {
+    case "route": return <Route {...props} />;
+    case "wallet": return <Wallet {...props} />;
+    case "qrcode": return <QrCode {...props} />;
+    case "arrows": return <ArrowRightLeft {...props} />;
+    case "brain": return <Brain {...props} />;
+    case "shield": return <Shield {...props} />;
+  }
+}
 
 // Mock UI for each module panel
 function ModuleMockup({ moduleId, accent }: { moduleId: string; accent: string }) {
@@ -334,7 +342,7 @@ export function OSModuleNav() {
   const [active, setActive] = useState(0);
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const [dotY, setDotY] = useState(0);
-  const [dotHeight, setDotHeight] = useState(8);
+  const DOT_SIZE = 8;
 
   useEffect(() => {
     const el = itemRefs.current[active];
@@ -343,10 +351,10 @@ export function OSModuleNav() {
       if (parent) {
         const parentRect = parent.getBoundingClientRect();
         const elRect = el.getBoundingClientRect();
-        setDotY(elRect.top - parentRect.top + elRect.height / 2 - dotHeight / 2);
+        setDotY(elRect.top - parentRect.top + elRect.height / 2 - DOT_SIZE / 2);
       }
     }
-  }, [active, dotHeight]);
+  }, [active]);
 
   const activeModule = modules[active];
 
@@ -375,10 +383,12 @@ export function OSModuleNav() {
           <div className="relative w-full lg:w-56 flex-shrink-0">
             {/* Animated dot indicator */}
             <motion.div
-              className="absolute left-0 w-2 h-2 rounded-full"
+              className="absolute left-0 rounded-full"
               style={{
                 background: "#4F46E5",
                 top: dotY,
+                width: DOT_SIZE,
+                height: DOT_SIZE,
               }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
@@ -427,10 +437,7 @@ export function OSModuleNav() {
                         className="w-10 h-10 rounded-xl flex items-center justify-center"
                         style={{ background: `${activeModule.accent}15` }}
                       >
-                        <activeModule.icon
-                          className="w-5 h-5"
-                          style={{ color: activeModule.accent }}
-                        />
+                        <ModuleIcon iconKey={activeModule.iconKey} color={activeModule.accent} />
                       </div>
                       <h3 className="text-2xl md:text-3xl font-semibold tracking-tight" style={{ color: "#111111" }}>
                         {activeModule.title}
