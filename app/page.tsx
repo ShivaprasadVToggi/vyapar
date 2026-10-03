@@ -4,7 +4,6 @@ import { Section } from "@/components/Section";
 import { LogoStrip } from "@/components/LogoStrip";
 import { FeatureRow } from "@/components/FeatureRow";
 import { ModuleTabs } from "@/components/ModuleTabs";
-import { OSModuleNav } from "@/components/animations/OSModuleNav";
 import { SpreadCalculator } from "@/components/SpreadCalculator";
 import { PersonaCards } from "@/components/PersonaCards";
 import { OutcomesStrip } from "@/components/OutcomesStrip";
@@ -114,7 +113,14 @@ export default function HomePage() {
       </Section>
 
       {/* ============== B2BEAT OS ============== */}
-      <OSModuleNav />
+      <Section
+        eyebrow="B2Beat OS"
+        title="One home for pooling, financing, and collecting. At any scale."
+        subtitle="Six modules. One operating system. Pick what you need, or run the full stack end-to-end."
+        className="bg-[var(--vp-bg-soft)]"
+      >
+        <ModuleTabs />
+      </Section>
 
       {/* ============== SPREAD CALCULATOR ============== */}
       <Section
