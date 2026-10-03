@@ -7,7 +7,7 @@ import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Platform",
-  description: "Explore VyaparPool OS — six modules for pooling, financing, and collecting at any scale.",
+  description: "Explore B2Beat OS — six modules for pooling, financing, and collecting at any scale.",
 };
 
 const modules = [
@@ -53,7 +53,7 @@ export default function PlatformPage() {
   return (
     <>
       <PageHeader
-        eyebrow="VyaparPool OS"
+        eyebrow="B2Beat OS"
         title="One platform. Six modules. Infinite routes."
         subtitle="Pick the modules you need, or run the full stack end-to-end. Every module shares the same data model, the same ledger, and the same compliance posture."
         ctaPrimary={{ label: "Get Started", href: "/get-started" }}
@@ -95,7 +95,7 @@ export default function PlatformPage() {
       <Section
         eyebrow="Architecture"
         title="Rides the rails India already trusts."
-        subtitle="VyaparPool is a software and credit-orchestration layer. We don't own warehouses, trucks, or drop points. We make the existing infrastructure work harder."
+        subtitle="B2Beat is a software and credit-orchestration layer. We don't own warehouses, trucks, or drop points. We make the existing infrastructure work harder."
         className="bg-[var(--vp-bg-soft)]"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

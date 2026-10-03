@@ -1,41 +1,50 @@
-// Design tokens for VyaparPool
-// Central source of truth for colors, typography, spacing, radii, and shadows
+// Design tokens for B2Beat
+// Canopy-inspired: near-black dark theme, royal blue accent, purple gradients
 
 export const colors = {
   background: {
     DEFAULT: '#FFFFFF',
-    soft: '#FAFAF9',
-    surface: '#F7F8F9',
-    brand: '#E8F3EF',
+    dark: '#0A0A0A',
+    soft: '#FAFAFA',
+    surface: '#F4F4F5',
+    darkSurface: '#141414',
+    darkSurfaceAlt: '#1A1A1A',
   },
   foreground: {
-    DEFAULT: '#0F1115',
-    muted: '#5B6470',
-    subtle: '#8A939E',
+    DEFAULT: '#111111',
+    onDark: '#FFFFFF',
+    muted: '#6B7280',
+    onDarkMuted: '#9CA3AF',
+    subtle: '#A1A1AA',
     inverse: '#FFFFFF',
   },
   border: {
-    DEFAULT: '#E6E8EB',
-    strong: '#D4D7DC',
+    DEFAULT: '#E5E5E5',
+    strong: '#D4D4D4',
+    onDark: '#262626',
+    onDarkStrong: '#333333',
   },
   brand: {
-    DEFAULT: '#0B5D4B',
-    hover: '#094D3E',
-    pressed: '#073D31',
-    surface: '#E8F3EF',
-    border: '#B8D8CC',
+    DEFAULT: '#4F46E5',
+    hover: '#4338CA',
+    pressed: '#3730A3',
+    surface: '#EEF2FF',
+    surfaceDark: '#1E1B4B',
+    border: '#C7D2FE',
   },
   accent: {
-    amber: '#F2B544',
-    amberSurface: '#FDF6E7',
+    purple: '#7C3AED',
+    purpleLight: '#A855F7',
+    lime: '#D9F99D',
+    yellow: '#FACC15',
   },
   success: {
-    DEFAULT: '#1E8E5C',
-    surface: '#E6F4EC',
+    DEFAULT: '#10B981',
+    surface: '#ECFDF5',
   },
   critical: {
-    DEFAULT: '#C83828',
-    surface: '#FBECEA',
+    DEFAULT: '#EF4444',
+    surface: '#FEF2F2',
   },
 } as const;
 
@@ -54,16 +63,16 @@ export const typography = {
     '3xl': '36px',
     '4xl': '44px',
     '5xl': '56px',
-    '6xl': '68px',
+    '6xl': '72px',
   },
   lineHeight: {
-    tight: '1.15',
-    snug: '1.3',
+    tight: '1.05',
+    snug: '1.2',
     normal: '1.5',
     relaxed: '1.6',
   },
   letterSpacing: {
-    tight: '-0.02em',
+    tight: '-0.025em',
     normal: '0',
     wide: '0.08em',
   },
@@ -85,6 +94,7 @@ export const spacing = {
   24: '96px',
   28: '112px',
   32: '128px',
+  36: '144px',
 } as const;
 
 export const radii = {
@@ -96,14 +106,14 @@ export const radii = {
 } as const;
 
 export const shadows = {
-  sm: '0 1px 2px rgba(15, 17, 21, 0.04)',
-  md: '0 4px 12px rgba(15, 17, 21, 0.06)',
-  lg: '0 12px 32px rgba(15, 17, 21, 0.08)',
-  card: '0 1px 3px rgba(15, 17, 21, 0.04), 0 1px 2px rgba(15, 17, 21, 0.03)',
-  cardHover: '0 8px 24px rgba(15, 17, 21, 0.08)',
+  sm: '0 1px 2px rgba(0, 0, 0, 0.04)',
+  md: '0 4px 12px rgba(0, 0, 0, 0.06)',
+  lg: '0 12px 32px rgba(0, 0, 0, 0.08)',
+  card: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03)',
+  cardHover: '0 8px 24px rgba(0, 0, 0, 0.08)',
 } as const;
 
 export const maxWidth = {
-  content: '1200px',
+  content: '1240px',
   narrow: '880px',
 } as const;

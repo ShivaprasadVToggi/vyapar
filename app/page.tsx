@@ -46,7 +46,7 @@ export default function HomePage() {
               <span style={{ color: "var(--vp-brand)" }}>with every beat.</span>
             </h1>
             <p className="text-[19px] text-muted leading-relaxed max-w-2xl mx-auto mb-8">
-              VyaparPool turns distributor delivery routes into pooled, pre-financed orders.
+              B2Beat turns distributor delivery routes into pooled, pre-financed orders.
               Distributors get paid in 24 hours. Kiranas buy ~2.1% cheaper with zero upfront cash.
               Lenders get a closed-loop, self-repaying book.
             </p>
@@ -78,7 +78,7 @@ export default function HomePage() {
 
       {/* ============== VYAPARPOOL CORE ============== */}
       <Section
-        eyebrow="VyaparPool Core"
+        eyebrow="B2Beat Core"
         title="A pooling engine. And so much more."
         subtitle="Four tightly-integrated capabilities that turn a distributor's existing delivery beat into a financed, risk-controlled flow."
       >
@@ -114,7 +114,7 @@ export default function HomePage() {
 
       {/* ============== VYAPARPOOL OS ============== */}
       <Section
-        eyebrow="VyaparPool OS"
+        eyebrow="B2Beat OS"
         title="One home for pooling, financing, and collecting. At any scale."
         subtitle="Six modules. One operating system. Pick what you need, or run the full stack end-to-end."
         className="bg-[var(--vp-bg-soft)]"
@@ -187,7 +187,7 @@ export default function HomePage() {
       {/* ============== INTEGRATIONS ============== */}
       <Section
         eyebrow="Integrations"
-        title="Distributor ERPs. NBFCs. Payment aggregators. Whoever you work with, VyaparPool connects."
+        title="Distributor ERPs. NBFCs. Payment aggregators. Whoever you work with, B2Beat connects."
         className="bg-[var(--vp-bg-soft)]"
       >
         <IntegrationsGrid />

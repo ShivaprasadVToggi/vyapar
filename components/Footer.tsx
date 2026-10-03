@@ -83,12 +83,12 @@ export function Footer() {
               className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm"
               style={{ background: "var(--vp-brand)" }}
             >
-              VP
+              B2
             </span>
             <div>
-              <div className="font-semibold">VyaparPool Technologies</div>
+              <div className="font-semibold">B2Beat Technologies</div>
               <div className="text-[12px] opacity-50 mt-0.5 max-w-md">
-                VyaparPool is a Lending Service Provider and does not lend directly.
+                B2Beat is a Lending Service Provider and does not lend directly.
                 Credit is extended by RBI-regulated NBFC partners.
               </div>
             </div>
@@ -127,7 +127,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[12px] opacity-50">
-          <div>© {new Date().getFullYear()} VyaparPool Technologies Pvt. Ltd. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} B2Beat Technologies Pvt. Ltd. All rights reserved.</div>
           <div className="flex items-center gap-5">
             <Link href="/legal/terms" className="hover:opacity-100 transition-opacity">Terms</Link>
             <Link href="/legal/privacy" className="hover:opacity-100 transition-opacity">Privacy</Link>

@@ -14,7 +14,7 @@ const steps = [
     num: "01",
     icon: Layers,
     title: "Virtual Beat Pooling",
-    desc: "48 hours before a distributor's scheduled route, VyaparPool opens a Route Pool. Kiranas commit staple quantities anonymously. Progressive discount tiers unlock at 40%, 70%, and 100% fill. Anti-monopoly rule: no merchant can take more than 35% of a pool.",
+    desc: "48 hours before a distributor's scheduled route, B2Beat opens a Route Pool. Kiranas commit staple quantities anonymously. Progressive discount tiers unlock at 40%, 70%, and 100% fill. Anti-monopoly rule: no merchant can take more than 35% of a pool.",
     accent: "var(--vp-brand-surface)",
     accentColor: "var(--vp-brand)",
   },
@@ -50,7 +50,7 @@ export default function HowItWorksPage() {
       <PageHeader
         eyebrow="How It Works"
         title="Four steps. Zero new assets."
-        subtitle="VyaparPool is a software and credit-orchestration layer on top of existing distributor delivery beats. Here's how a single route flows through the system."
+        subtitle="B2Beat is a software and credit-orchestration layer on top of existing distributor delivery beats. Here's how a single route flows through the system."
       />
 
       <Section eyebrow="The flow" title="From pool open to repayment complete.">

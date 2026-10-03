@@ -20,19 +20,19 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B5D4B",
+  themeColor: "#4F46E5",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vyaparpool.com"),
+  metadataBase: new URL("https://b2beat.com"),
   title: {
-    default: "VyaparPool — Working capital, delivered with every beat",
-    template: "%s · VyaparPool",
+    default: "B2Beat — Working capital, delivered with every beat",
+    template: "%s · B2Beat",
   },
   description:
-    "VyaparPool turns distributor delivery routes into pooled, pre-financed orders. Distributors get paid in 24 hours. Kiranas buy cheaper with zero upfront cash. Lenders get a closed-loop, self-repaying book.",
+    "B2Beat turns distributor delivery routes into pooled, pre-financed orders. Distributors get paid in 24 hours. Kiranas buy cheaper with zero upfront cash. Lenders get a closed-loop, self-repaying book.",
   keywords: [
-    "VyaparPool",
+    "B2Beat",
     "working capital",
     "kirana finance",
     "distributor DSO",
@@ -42,16 +42,16 @@ export const metadata: Metadata = {
     "LSP",
   ],
   openGraph: {
-    title: "VyaparPool — Working capital, delivered with every beat",
+    title: "B2Beat — Working capital, delivered with every beat",
     description:
       "An asset-light demand-aggregation and embedded working-capital platform for semi-urban and rural kirana stores in India.",
     type: "website",
     locale: "en_IN",
-    siteName: "VyaparPool",
+    siteName: "B2Beat",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VyaparPool — Working capital, delivered with every beat",
+    title: "B2Beat — Working capital, delivered with every beat",
     description:
       "Turn distributor routes into pooled, pre-financed orders. T+0 payments for distributors, zero-upfront buying for kiranas.",
   },

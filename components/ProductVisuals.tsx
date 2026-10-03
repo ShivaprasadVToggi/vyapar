@@ -353,7 +353,7 @@ export function PhoneOTPUI() {
                 <Shield className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-[11px] text-subtle">VyaparPool</div>
+                <div className="text-[11px] text-subtle">B2Beat</div>
                 <div className="font-semibold text-[13px]">Proof of Delivery</div>
               </div>
             </div>

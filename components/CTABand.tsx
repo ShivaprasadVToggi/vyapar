@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function CTABand() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: "#0F1115" }}>
+    <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: "#0A0A0A" }}>
       {/* Decorative */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div

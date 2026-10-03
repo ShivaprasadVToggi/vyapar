@@ -26,19 +26,19 @@ export default function CreditIntelligencePage() {
       <PageHeader
         eyebrow="Platform · Credit Intelligence"
         title="Behavioral underwriting nobody else can build."
-        subtitle="Traditional credit bureaus see yesterday's loans. VyaparPool sees today's operating behavior: order size, fulfilment frequency, UPI sweep velocity. The result is a credit signal that's fresher, fairer, and far more predictive for semi-urban India."
+        subtitle="Traditional credit bureaus see yesterday's loans. B2Beat sees today's operating behavior: order size, fulfilment frequency, UPI sweep velocity. The result is a credit signal that's fresher, fairer, and far more predictive for semi-urban India."
         ctaPrimary={{ label: "Request a demo", href: "/get-started" }}
       />
 
       <Section eyebrow="The score" title="A behavioral score, not a bureau report.">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="heading-md mb-4">Built on signals only VyaparPool can see.</h3>
+            <h3 className="heading-md mb-4">Built on signals only B2Beat can see.</h3>
             <p className="text-[16px] text-muted leading-relaxed mb-6">
               Every Route Pool participation, every proof-of-delivery confirmation, every daily UPI sweep — these are not just transactions. They are high-frequency behavioral data points that describe how a merchant actually operates.
             </p>
             <p className="text-[16px] text-muted leading-relaxed">
-              The VyaparPool behavioral score updates continuously, giving NBFC partners an underwriting input that refreshes with every beat, not every quarter.
+              The B2Beat behavioral score updates continuously, giving NBFC partners an underwriting input that refreshes with every beat, not every quarter.
             </p>
           </div>
           <div className="relative">

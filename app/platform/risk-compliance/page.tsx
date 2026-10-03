@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const pillars = [
   {
     title: "RBI LSP Framework",
-    desc: "VyaparPool operates as a Lending Service Provider. We do not lend directly. All credit is extended by RBI-regulated NBFC partners.",
+    desc: "B2Beat operates as a Lending Service Provider. We do not lend directly. All credit is extended by RBI-regulated NBFC partners.",
   },
   {
     title: "PA Nodal Accounting",
@@ -53,12 +53,12 @@ export default function RiskCompliancePage() {
           <div>
             <h3 className="heading-md mb-4">Engineered for audit, not just operation.</h3>
             <p className="text-[16px] text-muted leading-relaxed mb-6">
-              Every module in VyaparPool OS generates an immutable record. Reconstruct any transaction, any mandate, any sweep from first principles. The system is designed to be explainable to auditors, regulators, and your own risk team.
+              Every module in B2Beat OS generates an immutable record. Reconstruct any transaction, any mandate, any sweep from first principles. The system is designed to be explainable to auditors, regulators, and your own risk team.
             </p>
             <div className="flex items-start gap-3 p-4 rounded-xl" style={{ background: "var(--vp-brand-surface)" }}>
               <Shield className="w-5 h-5 shrink-0 mt-0.5" style={{ color: "var(--vp-brand)" }} />
               <p className="text-[14px]" style={{ color: "var(--vp-brand)" }}>
-                <strong>Important:</strong> VyaparPool is a Lending Service Provider and does not lend directly. Credit is extended by RBI-regulated NBFC partners.
+                <strong>Important:</strong> B2Beat is a Lending Service Provider and does not lend directly. Credit is extended by RBI-regulated NBFC partners.
               </p>
             </div>
           </div>

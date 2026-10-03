@@ -6,7 +6,7 @@ import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Join VyaparPool and build the embedded working-capital layer for semi-urban and rural India.",
+  description: "Join B2Beat and build the embedded working-capital layer for semi-urban and rural India.",
 };
 
 const roles = [
@@ -36,14 +36,14 @@ const roles = [
     team: "Risk",
     location: "Bengaluru · Hybrid",
     type: "Full-time",
-    desc: "Model portfolio risk on a new closed-loop asset class. Build early-warning indicators from VyaparPool's unique behavioral signals.",
+    desc: "Model portfolio risk on a new closed-loop asset class. Build early-warning indicators from B2Beat's unique behavioral signals.",
   },
   {
     title: "Senior Frontend Engineer",
     team: "Engineering",
     location: "Bengaluru · Hybrid",
     type: "Full-time",
-    desc: "Build the VyaparPool OS used by distributors, NBFC ops teams, and our field force. Next.js, TypeScript, design systems.",
+    desc: "Build the B2Beat OS used by distributors, NBFC ops teams, and our field force. Next.js, TypeScript, design systems.",
   },
   {
     title: "NBFC Partnerships",
@@ -64,7 +64,7 @@ export default function CareersPage() {
         ctaPrimary={{ label: "See open roles", href: "#roles" }}
       />
 
-      <Section eyebrow="Why VyaparPool" title="A small team. A large problem. Real leverage.">
+      <Section eyebrow="Why B2Beat" title="A small team. A large problem. Real leverage.">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {[
             { title: "Real-world impact", desc: "The product you build directly improves the economics of kirana stores and distributors across India." },

@@ -117,7 +117,7 @@ export function SpreadCalculator() {
 
           <p className="text-[11px] text-subtle leading-relaxed pt-2 border-t border-[var(--vp-border)]">
             Illustrative. Actual terms vary by distributor and partner. Split at 100% fill:
-            kiranas 2.1% · NBFC 1.0% · VyaparPool 0.4%.
+            kiranas 2.1% · NBFC 1.0% · B2Beat 0.4%.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ export function SpreadCalculator() {
               />
               <motion.div
                 className="h-full"
-                style={{ background: "#0F1115" }}
+                style={{ background: "#0A0A0A" }}
                 initial={{ width: 0 }}
                 animate={{ width: mounted ? `${vpW}%` : "0%" }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -174,10 +174,10 @@ export function SpreadCalculator() {
                   color: "var(--vp-accent-amber)",
                 },
                 {
-                  label: "VyaparPool",
+                  label: "B2Beat",
                   pct: tier.vpPct,
                   val: breakdown.vpFee,
-                  color: "#0F1115",
+                  color: "#0A0A0A",
                 },
               ].map((item) => (
                 <div key={item.label} className="p-3 rounded-xl bg-[var(--vp-bg-surface)]">

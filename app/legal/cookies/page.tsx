@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: "Cookie Policy for VyaparPool Technologies.",
+  description: "Cookie Policy for B2Beat Technologies.",
 };
 
 export default function CookiesPage() {

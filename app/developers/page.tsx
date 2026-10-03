@@ -6,7 +6,7 @@ import { Code2, Zap, Shield, BookOpen, ArrowRight, CheckCircle2 } from "lucide-r
 
 export const metadata: Metadata = {
   title: "Developers",
-  description: "Low-code APIs and webhooks for building flexible lending products on top of VyaparPool's rails.",
+  description: "Low-code APIs and webhooks for building flexible lending products on top of B2Beat's rails.",
 };
 
 const features = [
@@ -21,7 +21,7 @@ export default function DevelopersPage() {
     <>
       <PageHeader
         eyebrow="Developers"
-        title="Build on VyaparPool's rails."
+        title="Build on B2Beat's rails."
         subtitle="Low-code APIs and webhooks for distributors, NBFCs, and fintech partners who want to embed pooled, pre-financed wholesale commerce into their own products."
         ctaPrimary={{ label: "Get API keys", href: "/get-started" }}
       />
@@ -45,12 +45,12 @@ export default function DevelopersPage() {
 
       <Section eyebrow="Code example" title="Create a pool. Lock it. Get paid." className="bg-[var(--vp-bg-soft)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <div className="rounded-2xl p-6 text-white overflow-x-auto" style={{ background: "#0F1115" }}>
+          <div className="rounded-2xl p-6 text-white overflow-x-auto" style={{ background: "#0A0A0A" }}>
             <div className="text-[11px] uppercase tracking-wide text-white/50 mb-3">Create & lock a Route Pool</div>
             <pre className="text-[12.5px] leading-relaxed font-mono-tabular text-white/85">
 {`// Initialize the client
-import { VyaparPool } from "@vyaparpool/sdk";
-const vp = new VyaparPool({ apiKey: process.env.VP_API_KEY });
+import { B2Beat } from "@vyaparpool/sdk";
+const vp = new B2Beat({ apiKey: process.env.VP_API_KEY });
 
 // 1. Create a route pool
 const pool = await vp.pools.create({
@@ -74,7 +74,7 @@ console.log("Disbursal triggered:", locked.disbursalId);
 // POST /webhooks/vyaparpool → { event: "disbursal.completed", ... }`}
             </pre>
           </div>
-          <div className="rounded-2xl p-6 overflow-x-auto" style={{ background: "#0F1115" }}>
+          <div className="rounded-2xl p-6 overflow-x-auto" style={{ background: "#0A0A0A" }}>
             <div className="text-[11px] uppercase tracking-wide text-white/50 mb-3">Webhook response</div>
             <pre className="text-[12.5px] leading-relaxed font-mono-tabular text-white/85">
 {`{
@@ -105,7 +105,7 @@ console.log("Disbursal triggered:", locked.disbursalId);
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {[
             "White-label Route Pools for your distributor network",
-            "Custom credit products using VyaparPool behavioral scores",
+            "Custom credit products using B2Beat behavioral scores",
             "Embedded repayment into your merchant app",
             "ERP reconciliation feeds for distributors",
             "Portfolio monitoring dashboards for lenders",

@@ -35,7 +35,7 @@ export default function ClosedLoopDisbursalPage() {
           <div className="space-y-6">
             {[
               { step: "01", title: "Pool locks", desc: "Route Pool reaches deadline; final commitments and total invoice value are confirmed." },
-              { step: "02", title: "NBFC approves", desc: "Credit decision based on pool structure, distributor history, and behavioral signals from VyaparPool." },
+              { step: "02", title: "NBFC approves", desc: "Credit decision based on pool structure, distributor history, and behavioral signals from B2Beat." },
               { step: "03", title: "Funds to distributor", desc: "100% of invoice value disbursed directly to the distributor's bank account within 24 hours." },
               { step: "04", title: "Goods in transit", desc: "Distributor loads the truck and delivers on the existing route. Repayment begins after delivery confirmation." },
             ].map((s) => (

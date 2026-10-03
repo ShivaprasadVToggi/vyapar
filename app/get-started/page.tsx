@@ -79,7 +79,7 @@ export default function GetStartedPage() {
       <PageHeader
         eyebrow="Get Started"
         title="Let's talk about your routes."
-        subtitle="Tell us a bit about yourself. A VyaparPool specialist will reach out within one business day to discuss a pilot or partnership."
+        subtitle="Tell us a bit about yourself. A B2Beat specialist will reach out within one business day to discuss a pilot or partnership."
       />
 
       <section className="pb-20">
@@ -128,7 +128,7 @@ export default function GetStartedPage() {
                     </div>
                     <h3 className="font-semibold text-[22px] mb-2">Thank you.</h3>
                     <p className="text-[15px] text-muted max-w-md mx-auto">
-                      We've received your details. A VyaparPool specialist will be in touch within one business day.
+                      We've received your details. A B2Beat specialist will be in touch within one business day.
                     </p>
                   </div>
                 ) : (
@@ -253,7 +253,7 @@ export default function GetStartedPage() {
                     </button>
 
                     <p className="text-[11px] text-subtle">
-                      By submitting, you agree to be contacted by VyaparPool regarding your request. We'll never share your information.
+                      By submitting, you agree to be contacted by B2Beat regarding your request. We'll never share your information.
                     </p>
                   </form>
                 )}

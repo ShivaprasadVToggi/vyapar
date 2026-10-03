@@ -6,7 +6,7 @@ import { Target, Eye, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "VyaparPool is building the embedded working-capital layer for semi-urban and rural India's kirana economy.",
+  description: "B2Beat is building the embedded working-capital layer for semi-urban and rural India's kirana economy.",
 };
 
 const values = [
@@ -33,7 +33,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="Working capital infrastructure for the India that's often overlooked."
-        subtitle="VyaparPool is an asset-light demand-aggregation and embedded working-capital platform. We're a software and credit-orchestration layer on top of existing distributor delivery beats. No warehouses, no trucks, no drop points."
+        subtitle="B2Beat is an asset-light demand-aggregation and embedded working-capital platform. We're a software and credit-orchestration layer on top of existing distributor delivery beats. No warehouses, no trucks, no drop points."
       />
 
       <Section eyebrow="Mission" title="Make the 2% cash discount reach every kirana.">
@@ -42,7 +42,7 @@ export default function AboutPage() {
             India's 12 million kirana stores are the backbone of retail. Yet most lose 2–2.5% cash discount on every staple purchase — over ₹1,20,000 a year — simply because they can't put down lump-sum cash. Distributors, meanwhile, carry 20–30 day DSO and recurring bad debt.
           </p>
           <p className="text-[18px] leading-relaxed text-muted mt-5">
-            VyaparPool fixes both sides of the equation at once. By pooling demand across a route and embedding credit into the flow itself, we unlock savings for retailers, compress DSO for distributors, and create a new closed-loop asset class for lenders.
+            B2Beat fixes both sides of the equation at once. By pooling demand across a route and embedding credit into the flow itself, we unlock savings for retailers, compress DSO for distributors, and create a new closed-loop asset class for lenders.
           </p>
         </div>
       </Section>
@@ -80,12 +80,12 @@ export default function AboutPage() {
               <div className="font-mono-tabular font-bold text-xl" style={{ color: "#8A6A1B" }}>1.0% · ₹2,000</div>
             </div>
             <div className="p-4 rounded-xl bg-[var(--vp-bg-surface)]">
-              <div className="text-[12px] text-muted mb-1">VyaparPool</div>
+              <div className="text-[12px] text-muted mb-1">B2Beat</div>
               <div className="font-mono-tabular font-bold text-xl">0.4% · ₹800</div>
             </div>
           </div>
           <p className="text-[11px] text-subtle mt-4">
-            Illustrative figures. VyaparPool revenue = LSP origination fee from NBFC (1.0–1.5% annualized) + distributor SaaS/DSO fee (0.4–0.5%).
+            Illustrative figures. B2Beat revenue = LSP origination fee from NBFC (1.0–1.5% annualized) + distributor SaaS/DSO fee (0.4–0.5%).
           </p>
         </div>
       </Section>

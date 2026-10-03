@@ -17,7 +17,7 @@ export function CaseCard({ tag, title, description, metric, metricLabel }: CaseC
         className="aspect-[16/10] relative"
         style={{
           background:
-            "linear-gradient(135deg, #E8F3EF 0%, #FDF6E7 50%, #F7F8F9 100%)",
+            "linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 50%, #F4F4F5 100%)",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
@@ -64,7 +64,7 @@ export function CaseCard({ tag, title, description, metric, metricLabel }: CaseC
 
 export function DeveloperCard() {
   return (
-    <div className="rounded-2xl p-7 flex flex-col text-white relative overflow-hidden" style={{ background: "#0F1115" }}>
+    <div className="rounded-2xl p-7 flex flex-col text-white relative overflow-hidden" style={{ background: "#0A0A0A" }}>
       <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style={{ background: "var(--vp-brand)", filter: "blur(60px)" }} />
 
       <div className="relative">

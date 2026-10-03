@@ -1,6 +1,6 @@
-# VyaparPool — Marketing Website
+# B2Beat — Marketing Website
 
-Enterprise-grade marketing website for **VyaparPool**, an asset-light demand-aggregation and embedded working-capital platform for semi-urban and rural kirana stores in India.
+Enterprise-grade marketing website for **B2Beat**, an asset-light demand-aggregation and embedded working-capital platform for semi-urban and rural kirana stores in India.
 
 Built with **Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Framer Motion + Lucide icons**.
 
@@ -91,9 +91,9 @@ vyapar/
 
 | Token | Value | Usage |
 |---|---|---|
-| `--vp-brand` | `#0B5D4B` | Deep forest emerald · CTAs, eyebrows, accents |
-| `--vp-brand-surface` | `#E8F3EF` | Brand-tinted surfaces |
-| `--vp-accent-amber` | `#F2B544` | Data highlights, tier progress only |
+| `--vp-brand` | `#4F46E5` | Royal blue · CTAs, eyebrows, accents |
+| `--vp-brand-surface` | `#EEF2FF` | Brand-tinted surfaces |
+| `--vp-accent-amber` | `#7C3AED` | Purple accent · data highlights only |
 | `--vp-fg` | `#0F1115` | Near-black text |
 | `--vp-fg-muted` | `#5B6470` | Secondary text |
 | `--vp-border` | `#E6E8EB` | Hairline borders |
@@ -208,7 +208,7 @@ CRM_WEBHOOK_URL=...
 - [x] No rural/bazaar clichés, no stock photos, no emoji in HTML
 - [x] Deep emerald brand color, not purple/plum
 - [x] All nav items route to real pages
-- [x] Lending disclosure in footer: "VyaparPool is a Lending Service Provider and does not lend directly…"
+- [x] Lending disclosure in footer: "B2Beat is a Lending Service Provider and does not lend directly…"
 - [x] "Illustrative figures" notes near calculator and stats
 - [x] Indian number formatting (₹2,00,000) throughout
 - [x] No unverified regulatory claims, certifications, or customer endorsements

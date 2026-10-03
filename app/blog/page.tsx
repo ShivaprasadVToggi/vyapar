@@ -17,7 +17,7 @@ const featured = {
     "Most semi-urban kiranas never capture the 2–2.5% cash discount distributors offer. The lump-sum cash requirement is the bottleneck — and it's solvable with embedded credit and demand pooling.",
   readTime: "6 min read",
   date: "March 2026",
-  gradient: "linear-gradient(135deg, #E8F3EF 0%, #D4E8DF 100%)",
+  gradient: "linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)",
 };
 
 const moreArticles = [
@@ -31,7 +31,7 @@ const moreArticles = [
   {
     category: "Lending",
     title: "Closed-loop paper: why structure beats credit score",
-    excerpt: "When the repayment mechanism is baked into the money flow itself, underwriting changes. What traditional lenders can learn from VyaparPool's dual-rail design.",
+    excerpt: "When the repayment mechanism is baked into the money flow itself, underwriting changes. What traditional lenders can learn from B2Beat's dual-rail design.",
     readTime: "7 min read",
     date: "February 2026",
   },

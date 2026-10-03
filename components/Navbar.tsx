@@ -147,9 +147,9 @@ export function Navbar() {
               className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm"
               style={{ background: "var(--vp-brand)" }}
             >
-              VP
+              B2
             </span>
-            <span className="tracking-tight">VyaparPool</span>
+            <span className="tracking-tight font-semibold">B2Beat</span>
           </Link>
 
           {/* Desktop nav */}

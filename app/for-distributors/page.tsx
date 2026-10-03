@@ -6,13 +6,13 @@ import { CheckCircle2, Building2, TrendingDown, Shield, Clock } from "lucide-rea
 
 export const metadata: Metadata = {
   title: "For Distributors",
-  description: "Cut DSO to T+0, eliminate bad debt, and stop chasing collections. VyaparPool turns your existing delivery beats into higher-margin routes.",
+  description: "Cut DSO to T+0, eliminate bad debt, and stop chasing collections. B2Beat turns your existing delivery beats into higher-margin routes.",
 };
 
 const benefits = [
   { icon: TrendingDown, title: "DSO from 25 days to T+0", desc: "Get paid in full within 24 hours of pool lock. The NBFC funds 100% of the invoice directly to you." },
   { icon: Shield, title: "Zero bad debt, zero collections", desc: "Credit risk sits with the NBFC. You never chase a kirana for payment again. Your sales team sells, your ops team delivers." },
-  { icon: Clock, title: "Same trucks, same routes", desc: "No new infrastructure. No warehouses. No drop points. VyaparPool is software that rides your existing delivery beats." },
+  { icon: Clock, title: "Same trucks, same routes", desc: "No new infrastructure. No warehouses. No drop points. B2Beat is software that rides your existing delivery beats." },
   { icon: Building2, title: "Higher capacity utilization", desc: "Pooled demand means fuller trucks on every beat. Better asset utilization on the fleet you already own." },
 ];
 
@@ -22,7 +22,7 @@ export default function ForDistributorsPage() {
       <PageHeader
         eyebrow="For Teams · Distributors"
         title="Stop waiting 25 days to get paid."
-        subtitle="VyaparPool turns your existing delivery routes into pooled, pre-financed orders. You deliver the same goods on the same trucks. The difference: you get paid in 24 hours, not 25 days."
+        subtitle="B2Beat turns your existing delivery routes into pooled, pre-financed orders. You deliver the same goods on the same trucks. The difference: you get paid in 24 hours, not 25 days."
         ctaPrimary={{ label: "Request a pilot", href: "/get-started" }}
       />
 
@@ -47,7 +47,7 @@ export default function ForDistributorsPage() {
         <div className="card-vp p-8 max-w-3xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <div className="text-[12px] text-subtle uppercase tracking-wide mb-3">Before VyaparPool</div>
+              <div className="text-[12px] text-subtle uppercase tracking-wide mb-3">Before B2Beat</div>
               <ul className="space-y-3 text-[14.5px] text-muted">
                 <li className="flex items-start gap-2"><span className="text-[var(--vp-critical)]">✗</span> 25–30 day DSO</li>
                 <li className="flex items-start gap-2"><span className="text-[var(--vp-critical)]">✗</span> 2–3% bad debt annually</li>
@@ -56,7 +56,7 @@ export default function ForDistributorsPage() {
               </ul>
             </div>
             <div>
-              <div className="text-[12px] uppercase tracking-wide mb-3" style={{ color: "var(--vp-brand)" }}>With VyaparPool</div>
+              <div className="text-[12px] uppercase tracking-wide mb-3" style={{ color: "var(--vp-brand)" }}>With B2Beat</div>
               <ul className="space-y-3 text-[14.5px]">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-1 shrink-0" style={{ color: "var(--vp-brand)" }} /> T+0 payment (funded within 24h)</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-1 shrink-0" style={{ color: "var(--vp-brand)" }} /> Zero credit risk to you</li>

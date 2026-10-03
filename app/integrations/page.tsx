@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Integrations",
-  description: "VyaparPool connects to distributor ERPs, NBFC core systems, payment aggregators, and communication rails.",
+  description: "B2Beat connects to distributor ERPs, NBFC core systems, payment aggregators, and communication rails.",
 };
 
 const categories = [
@@ -35,7 +35,7 @@ export default function IntegrationsPage() {
       <PageHeader
         eyebrow="Integrations"
         title="Connects to whoever you work with."
-        subtitle="VyaparPool is designed to plug into your existing stack — not replace it. REST APIs, webhooks, and pre-built connectors for the systems Indian distributors and NBFCs already run on."
+        subtitle="B2Beat is designed to plug into your existing stack — not replace it. REST APIs, webhooks, and pre-built connectors for the systems Indian distributors and NBFCs already run on."
       />
 
       <Section eyebrow="Ecosystem" title="Built on the rails India trusts.">

@@ -6,7 +6,7 @@ import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Use Cases",
-  description: "See how VyaparPool works for distributors, lenders, and retail networks across India.",
+  description: "See how B2Beat works for distributors, lenders, and retail networks across India.",
 };
 
 export default function UseCasesPage() {

@@ -9,7 +9,7 @@ const articles = [
       "Most semi-urban kiranas never capture the 2–2.5% cash discount distributors offer. The lump-sum cash requirement is the bottleneck — and it's solvable.",
     readTime: "6 min read",
     href: "/blog",
-    gradient: "linear-gradient(135deg, #E8F3EF 0%, #D4E8DF 100%)",
+    gradient: "linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)",
   },
   {
     category: "Distribution",
@@ -18,7 +18,7 @@ const articles = [
       "How demand aggregation and embedded credit are rewriting the economics of FMCG distribution in tier-3 and tier-4 India. A practical framework.",
     readTime: "8 min read",
     href: "/blog",
-    gradient: "linear-gradient(135deg, #FDF6E7 0%, #F5E6C0 100%)",
+    gradient: "linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%)",
   },
 ];
 

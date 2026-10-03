@@ -6,7 +6,7 @@ import { CaseCard } from "@/components/CaseCard";
 
 export const metadata: Metadata = {
   title: "Customers",
-  description: "See how distributors, lenders, and retail networks are using VyaparPool to transform working capital in semi-urban and rural India.",
+  description: "See how distributors, lenders, and retail networks are using B2Beat to transform working capital in semi-urban and rural India.",
 };
 
 const cases = [
@@ -48,7 +48,7 @@ const cases = [
   {
     tag: "PILOT · KARNATAKA",
     title: "Co-operative lender enters merchant lending",
-    description: "A district co-operative bank used VyaparPool's rail to deploy into merchant working capital for the first time — no new branches, no new collection staff.",
+    description: "A district co-operative bank used B2Beat's rail to deploy into merchant working capital for the first time — no new branches, no new collection staff.",
     metric: "0",
     metricLabel: "New field staff hired",
   },
@@ -60,7 +60,7 @@ export default function CustomersPage() {
       <PageHeader
         eyebrow="Customers"
         title="Pilots proving the model across India."
-        subtitle="Early deployments with distributors and NBFC partners are validating the VyaparPool model in real markets. Full case studies coming as pilots mature."
+        subtitle="Early deployments with distributors and NBFC partners are validating the B2Beat model in real markets. Full case studies coming as pilots mature."
       />
 
       <Section eyebrow="Pilot stories" title="What we're seeing in the field.">

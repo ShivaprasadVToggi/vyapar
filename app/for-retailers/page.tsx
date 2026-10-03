@@ -23,7 +23,7 @@ export default function ForRetailersPage() {
       <PageHeader
         eyebrow="For Teams · Retailers"
         title="Buy cheaper. Zero cash upfront."
-        subtitle="VyaparPool lets kirana stores capture the 2–2.5% cash discount on staples without putting down lump-sum capital. Goods arrive first. Repayment happens automatically from daily UPI sales."
+        subtitle="B2Beat lets kirana stores capture the 2–2.5% cash discount on staples without putting down lump-sum capital. Goods arrive first. Repayment happens automatically from daily UPI sales."
         ctaPrimary={{ label: "Talk to your distributor", href: "/get-started" }}
       />
 
@@ -36,7 +36,7 @@ export default function ForRetailersPage() {
             ₹1,20,000+
           </div>
           <p className="text-[15px] text-muted max-w-lg mx-auto">
-            Most semi-urban kiranas never capture the 2–2.5% cash discount because they can't afford the lump-sum payment. VyaparPool fixes that.
+            Most semi-urban kiranas never capture the 2–2.5% cash discount because they can't afford the lump-sum payment. B2Beat fixes that.
           </p>
         </div>
       </Section>
@@ -58,10 +58,10 @@ export default function ForRetailersPage() {
         </div>
       </Section>
 
-      <Section eyebrow="How to join" title="Ask your distributor about VyaparPool.">
+      <Section eyebrow="How to join" title="Ask your distributor about B2Beat.">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-[17px] text-muted leading-relaxed mb-6">
-            VyaparPool reaches kiranas through their existing distributors. If your distributor is on the platform, you can start participating in Route Pools immediately. If not, tell them about us — we'll take it from there.
+            B2Beat reaches kiranas through their existing distributors. If your distributor is on the platform, you can start participating in Route Pools immediately. If not, tell them about us — we'll take it from there.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="/get-started" className="btn-primary">Refer your distributor</a>

@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for VyaparPool Technologies.",
+  description: "Privacy Policy for B2Beat Technologies.",
 };
 
 export default function PrivacyPage() {
